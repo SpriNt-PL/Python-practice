@@ -7,7 +7,10 @@ class Item:
     def get_name(self):
         return self.__name
     
-i = Item("Sword", 7, 504.34)
+    def __str__(self):
+        return f"{self.__name} ({self.__weight}kg) - {self.__price} gold"
 
-print(i.get_name())
+i = Item("Sword", 7, 53)
+
+print(i)
 
