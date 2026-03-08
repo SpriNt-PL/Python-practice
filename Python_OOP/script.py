@@ -10,7 +10,11 @@ class Item:
     def __str__(self):
         return f"{self.__name} ({self.__weight}kg) - {self.__price} gold"
 
-i = Item("Sword", 7, 53)
+class Weapon(Item):
+    def __init__(self, name, weight, price):
+        super().__init__(name, weight, price)
+
+i = Weapon("Sword", 7, 53)
 
 print(i)
 
